@@ -11,7 +11,7 @@ const cors = require('./middlewares/cors').cors;
 const connectToDatabase = require('./database/connect');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 connectToDatabase();
 
