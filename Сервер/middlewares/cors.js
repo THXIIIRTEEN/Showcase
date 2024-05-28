@@ -4,7 +4,8 @@ const allowedCors = [
     'http://localhost:3000',
     'http://localhost:3001',
 	'https://18karatpindie.nomoredomainswork.ru',
-    'https://18karatservera.nomoredomainswork.ru'
+    'https://18karatservera.nomoredomainswork.ru',
+    'https://18karatservera.nomoredomainswork.ru/api/auth/login',
   ];
 
 function cors(req, res, next) {
