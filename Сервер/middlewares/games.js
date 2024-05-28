@@ -72,7 +72,6 @@ const checkEmptyFields = async (req, res, next) => {
     next();
     return;
   }
-
   if (
     !req.body.title ||
     !req.body.description ||

@@ -12,6 +12,7 @@ const checkIfCategoriesAvaliable = require('../middlewares/games').checkIfCatego
 const checkIfUsersAreSafe = require('../middlewares/games').checkIfUsersAreSafe;
 const checkIsGameExists = require('../middlewares/games').checkIsGameExists;
 const checkAuth = require('../middlewares/auth').checkAuth;
+const checkIsVoteRequest = require('../middlewares/auth').checkIsVoteRequest;
 
 const sendAllGames = require('../controllers/games').sendAllGames;
 const sendGameById = require('../controllers/games').sendGameById;
