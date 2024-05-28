@@ -39,6 +39,7 @@ gamesRouter.put(
   updateGame,
   sendGameUpdated,
   checkAuth,
+  findGameById,
   checkIsVoteRequest,
 );
 
