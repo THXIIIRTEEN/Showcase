@@ -34,13 +34,13 @@ gamesRouter.post(
 gamesRouter.put(
   "/games/:id",
   checkIsVoteRequest,
+  findGameById,
   checkIfUsersAreSafe,
   checkIfCategoriesAvaliable,
   checkEmptyFields,
   updateGame,
   sendGameUpdated,
   checkAuth,
-  findGameById,
 );
 
 gamesRouter.get('/games/:id', findGameById, sendGameById);
