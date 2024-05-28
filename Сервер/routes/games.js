@@ -51,3 +51,5 @@ gamesRouter.get('/games', findAllGames, sendAllGames);
 gamesRouter.delete("/games/:id", deleteGame, sendGameDeleted, checkAuth,); 
 
 module.exports = gamesRouter;
+
+//Final version
