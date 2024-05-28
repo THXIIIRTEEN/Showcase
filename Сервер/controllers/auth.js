@@ -14,20 +14,6 @@ const login = (req, res) => {
 
   users
   .findUserByCredentials(email, password)
-  .findOne({ email }).then(user => {
-    if (!user) {
-      return Promise.reject(new Error("Неправильные почта или пароль"));
-    }
-
-    return bcrypt.compare(password, user.password).then(matched => {
-      if (!matched) {
-        // Хеши не совпали — отклоняем промис
-        return Promise.reject(new Error("Неправильные почта или пароль"));
-      }
-      // Аутентификация успешна
-      return user; // Теперь user доступен
-    });
-  })
   .then((user) => {
       const token = jwt.sign({ _id: user._id }, "some-secret-key", {
       expiresIn: 3600
