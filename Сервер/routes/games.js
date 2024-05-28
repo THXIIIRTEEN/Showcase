@@ -40,7 +40,7 @@ gamesRouter.put(
   checkAuth,
 );
 
-gamesRouter.get('/games', findGameById, findAllGames, sendAllGames, sendGameById);
+gamesRouter.get('/games/:id', findGameById, findAllGames, sendAllGames, sendGameById);
 
 gamesRouter.delete("/games/:id", deleteGame, sendGameDeleted, checkAuth,); 
 
