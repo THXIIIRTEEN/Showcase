@@ -41,6 +41,8 @@ categoriesRouter.delete("/categories/:id", deleteCategory, sendCategoryDeleted, 
 // Обрабатываем GET-запрос с роутом '/categories'
 categoriesRouter.get('/categories', findAllCategories, sendAllCategories);
 
+categoriesRouter.get('/categories/:id', findCategoryById, sendCategoryById);
+
 
 // Экспортируем роут для использования в приложении — app.js
 module.exports = categoriesRouter;
