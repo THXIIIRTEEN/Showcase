@@ -42,6 +42,9 @@ gamesRouter.put(
 
 gamesRouter.get('/games/:id', findGameById, findAllGames, sendAllGames, sendGameById);
 
+gamesRouter.get('/games', findAllGames, sendAllGames);
+
+
 gamesRouter.delete("/games/:id", deleteGame, sendGameDeleted, checkAuth,); 
 
 module.exports = gamesRouter;
