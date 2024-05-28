@@ -10,6 +10,8 @@ const bcrypt = require('bcryptjs');
 const login = (req, res) => {
   const { email, password } = req.body;
 
+  console.log("lol")
+
   users
     .findUserByCredentials(email, password)
     .then((user) => {
