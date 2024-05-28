@@ -5,7 +5,6 @@ const allowedCors = [
     'http://localhost:3001',
 	'https://18karatpindie.nomoredomainswork.ru',
     'https://18karatservera.nomoredomainswork.ru',
-    'https://18karatservera.nomoredomainswork.ru/api/auth/login',
   ];
 
 function cors(req, res, next) {
@@ -14,7 +13,8 @@ function cors(req, res, next) {
     if (allowedCors.includes(origin)) { // Если это наш друг
         res.header('Access-Control-Allow-Origin', origin);
     }
-    
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
+    res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
     next();
 }
 
